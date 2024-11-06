@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+h1 {
+  font-size: 100px;
+  color: aliceblue;
+  backdrop-filter: brightness(0.5);
+  letter-spacing: 4px;
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  padding: 20px 40px;
+  font-size: 25px;
+  border: 4px solid;
+  cursor: pointer;
+  transition: 1s background-color;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+.split {
+  width: 50%;
+  height: 100%;
+  top: 0;
+}
+
+.split.left {
+  position: absolute;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-13-starlight-2023?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1679072987025");
+}
+
+.split.right {
+  position: absolute;
+  right: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://static-01.daraz.com.bd/p/554a7bafe8e722bb9080bfda9eba498d.jpg");
+  background-color: lightblue;
+}
+
+.active-left .left {
+  width: 75%;
+}
+
+.active-left .right {
+  width: 25%;
+}
+
+.left,
+.right {
+  transition: width 2s ease-in-out;
+}
